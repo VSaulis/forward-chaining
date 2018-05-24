@@ -1,0 +1,13 @@
+Rules:
+G -> Z
+A -> G
+A -> B
+B -> C
+C -> D
+D -> Z
+
+Facts:
+A
+
+Goal:
+Z

@@ -1,0 +1,4 @@
+1. Rule used : A -> X . Result : Rule return new facts : X
+2. Rule used : X B E -> Y . Result : Rule return new facts : Y
+3. Rule used : Y D -> Z . Result : Rule return new facts : Z
+Success

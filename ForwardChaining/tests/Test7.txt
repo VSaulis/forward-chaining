@@ -1,0 +1,12 @@
+Rules:
+Y, D -> Z
+X, B, E -> Y
+A -> X
+C -> L
+L, M -> N
+
+Facts:
+A, B, C, D, E
+
+Goal:
+Z

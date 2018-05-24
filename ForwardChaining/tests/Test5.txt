@@ -1,0 +1,16 @@
+Rules:
+A -> E
+A -> X
+A -> L
+L -> K
+D -> K
+D -> M
+G, B -> Z
+C, D -> F
+A -> D
+
+Facts:
+A, B, C
+
+Goal:
+A
