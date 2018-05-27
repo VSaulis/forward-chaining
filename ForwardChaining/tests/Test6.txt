@@ -1,6 +1,6 @@
 Rules:
-A -> B
-C -> Z
+R1. A -> B
+R2. C -> Z
 
 Facts:
 A

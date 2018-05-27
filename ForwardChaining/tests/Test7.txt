@@ -1,9 +1,9 @@
 Rules:
-Y, D -> Z
-X, B, E -> Y
-A -> X
-C -> L
-L, M -> N
+R1. Y, D -> Z
+R2. X, B, E -> Y
+R3. A -> X
+R4. C -> L
+R5. L, M -> N
 
 Facts:
 A, B, C, D, E

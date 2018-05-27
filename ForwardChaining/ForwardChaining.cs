@@ -8,18 +8,19 @@ namespace ForwardChaining {
     public class ForwardChaining {
         private readonly List<Rule> _rules;
         private readonly List<char> _facts;
+        private readonly List<Rule> _usedRules;
         private char _goal;
         private int _step;
 
         public ForwardChaining(string filename) {
             _step = 0;
+            _usedRules = new List<Rule>();
             _rules = new List<Rule>();
             _facts = new List<char>();
             ReadFile(filename);
         }
 
         public bool Iterate() {
-            _step++;
             if (_facts.Contains(_goal)) {
                 return true;
             }
@@ -36,24 +37,40 @@ namespace ForwardChaining {
                             }
                         }
                         if (changes == 0) {
-                            Log.AddToLog(_step + ". Rule used : " + rule.GetRule() + ". Result : " +"Rule not return new facts.");
+                            _step++;
+                            Log.AddToLog(_step + ". Rule used : R" + rule.GetNumber() + ". Result : " +
+                                         "Rule not return new facts.");
                         }
                         else {
-                            Log.AddToLog(_step + ". Rule used : " + rule.GetRule() + ". Result : " + "Rule return new facts : " + new string(rule.GetConsequent().ToArray()));
+                            _step++;
+                            _usedRules.Add(rule);
+                            Log.AddToLog(_step + ". Rule used : R" + rule.GetNumber() + ". Result : " +
+                                         "Rule return new facts : " + new string(rule.GetConsequent().ToArray()));
                             rule.SetIsUsed(false);
                         }
                         return Iterate();
                     }
+                    else {
+                        _step++;
+                        Log.AddToLog(_step + ". Rule used : R" + rule.GetNumber() + ". Result : " + "Rule antisedent not match facts.");
+                    }
                 }
                 else {
-                    Log.AddToLog(_step + ". Rule used : " + rule.GetRule() + ". Result : " + "Rule was already used.");    
+                    _step++;
+                    Log.AddToLog(
+                        _step + ". Rule used : R" + rule.GetNumber() + ". Result : " + "Rule was already used.");
                 }
             }
             return false;
         }
 
+        public List<Rule> GetUserRules() {
+            return _usedRules;
+        }
+
         private void ReadFile(string filename) {
             string status = "";
+            int ruleNumber = 0;
 
             List<string> lines = File.ReadAllLines(filename).ToList();
             foreach (var line in lines) {
@@ -74,7 +91,8 @@ namespace ForwardChaining {
 
                     if (status == "Rules") {
                         if (!String.IsNullOrEmpty(line)) {
-                            Rule rule = new Rule(line);
+                            ruleNumber++;
+                            Rule rule = new Rule(line, ruleNumber);
                             _rules.Add(rule);
                         }
                     }

@@ -1,4 +1,38 @@
-1. Rule used : A -> X . Result : Rule return new facts : X
-2. Rule used : X B E -> Y . Result : Rule return new facts : Y
-3. Rule used : Y D -> Z . Result : Rule return new facts : Z
+1. Rule used : R1. Result : Rule return new facts : L
+2. Rule used : R1. Result : Rule not return new facts.
+3. Rule used : R1. Result : Rule was already used.
+4. Rule used : R2. Result : Rule return new facts : K
+5. Rule used : R1. Result : Rule was already used.
+6. Rule used : R2. Result : Rule not return new facts.
+7. Rule used : R1. Result : Rule was already used.
+8. Rule used : R2. Result : Rule was already used.
+9. Rule used : R3. Result : Rule antisedent not match facts.
+10. Rule used : R4. Result : Rule antisedent not match facts.
+11. Rule used : R5. Result : Rule antisedent not match facts.
+12. Rule used : R6. Result : Rule antisedent not match facts.
+13. Rule used : R7. Result : Rule return new facts : D
+14. Rule used : R1. Result : Rule was already used.
+15. Rule used : R2. Result : Rule was already used.
+16. Rule used : R3. Result : Rule not return new facts.
+17. Rule used : R1. Result : Rule was already used.
+18. Rule used : R2. Result : Rule was already used.
+19. Rule used : R3. Result : Rule was already used.
+20. Rule used : R4. Result : Rule return new facts : M
+21. Rule used : R1. Result : Rule was already used.
+22. Rule used : R2. Result : Rule was already used.
+23. Rule used : R3. Result : Rule was already used.
+24. Rule used : R4. Result : Rule not return new facts.
+25. Rule used : R1. Result : Rule was already used.
+26. Rule used : R2. Result : Rule was already used.
+27. Rule used : R3. Result : Rule was already used.
+28. Rule used : R4. Result : Rule was already used.
+29. Rule used : R5. Result : Rule antisedent not match facts.
+30. Rule used : R6. Result : Rule return new facts : F
+31. Rule used : R1. Result : Rule was already used.
+32. Rule used : R2. Result : Rule was already used.
+33. Rule used : R3. Result : Rule was already used.
+34. Rule used : R4. Result : Rule was already used.
+35. Rule used : R5. Result : Rule return new facts : Z
+--------------------End--------------------
+Rules path : R1 -> R2 -> R7 -> R4 -> R6 -> R5
 Success

@@ -1,11 +1,11 @@
 Rules:
-A -> L
-L -> K
-D -> A
-D -> M
-F, B -> Z
-C, D -> F
-A -> D
+R1. A -> L
+R2. L -> K
+R3. D -> A
+R4. D -> M
+R5. F, B -> Z
+R6. C, D -> F
+R7. A -> D
 
 Facts:
 A, B, C

@@ -1,10 +1,10 @@
 Rules:
-G -> Z
-A -> G
-A -> B
-B -> C
-C -> D
-D -> Z
+R1. G -> Z
+R2. A -> G
+R3. A -> B
+R4. B -> C
+R5. C -> D
+R6. D -> Z
 
 Facts:
 A

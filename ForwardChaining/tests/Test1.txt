@@ -1,7 +1,7 @@
 Rules:
-F, B -> Z
-C, D -> F
-A -> D
+R1. F, B -> Z
+R2. C, D -> F
+R3. A -> D
 
 Facts:
 A, B, C

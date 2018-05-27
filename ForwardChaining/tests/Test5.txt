@@ -1,13 +1,13 @@
 Rules:
-A -> E
-A -> X
-A -> L
-L -> K
-D -> K
-D -> M
-G, B -> Z
-C, D -> F
-A -> D
+R1. A -> E
+R2. A -> X
+R3. A -> L
+R4. L -> K
+R5. D -> K
+R6. D -> M
+R7. G, B -> Z
+R8. C, D -> F
+R9. A -> D
 
 Facts:
 A, B, C
